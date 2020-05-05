@@ -17,5 +17,5 @@ Download this repository: https://github.com/benjistokman/typora-theme
 Clone this repository:
 
 ```
-git clone https://github.com/benjistokman/typora-theme.git'
+git clone https://github.com/benjistokman/typora-theme.git
 ```
