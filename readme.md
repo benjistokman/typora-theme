@@ -9,3 +9,13 @@ This theme is free to download, modify, use, and release for any reason; and is 
 ![light](light.png)
 
 ![dark](dark.png)
+
+## Download
+
+Download this repository: https://github.com/benjistokman/typora-theme
+
+Clone this repository:
+
+```
+git clone https://github.com/benjistokman/typora-theme.git'
+```
