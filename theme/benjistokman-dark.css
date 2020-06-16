@@ -1,16 +1,45 @@
-/* 1.0: Colors */
-/* 1.1 Background Colors */
-html, body, #write {background:#303030;}
-#typora-sidebar {background-color:#000000;}
-code, .md-fences {background:#404040;}
-.file-list-item.active {background-color: #303030;}
-.context-menu {background: #101010;}
+ :root {
+  --accent-color: #e11141;
+  --bg-color: #202020;
+  --border-color: #e11141;
+  --code-bg-color: #404040;
+  --text-color: #f5f5f5;
+  --header-color: #e11141;
+  --link-color: #e11141;
+  --side-bar-bg-color: #000000;
+  --window-border: 1px solid #f5f5f5;
+  --active-file-bg-color: #505050;
+  --body-font: 'Montserrat', sans-serif;
+  --font-size: 1rem;
+  --h1-fontsize: 3.25rem;
+  --h2-fontsize: 2.5rem;
+  --h3-fontsize: 2.25rem;
+  --line-height: 1rem;
+  --main-content-margin: 0 auto;
+  --main-content-max-width: 900px;
+  --monospace-font-size: 1rem;
+  --monospace-font: 'Share Tech Mono', monospace;
+  --monospace-line-height: 1rem;
+}
 
-/* 1.2: Other Colors */
+/* 1.0:Colors */
+/* 1.1 Background Colors */
+html, body, #write {background-color:#202020;}
+#typora-sidebar {background-color:#000000;}
+code, .md-fences {background-color:#404040;}
+.file-list-item.active {background-color:#303030;}
+.context-menu {background-color:#101010;}
+
+/* 1.2:Other Colors */
 blockquote {border-left:4px solid #e11141;}
 
 /* 2.0:Fonts */
-/* 2.1: Font Family */
+h1::before, h2::before, h3::before {font-weight: 700; font-size: 1rem; text-align: right; width: 3.5ch; padding-right: 1ch; margin-left: -3.5ch; color:#d0d0d0; display: inline-block;}
+h1::before {content: '#1';}
+h2::before {content: '#2';}
+h3::before {content: '#3';}
+
+/* 2.1:Font Family */
 @font-face {font-family:'Montserrat'; font-style:normal; font-weight:300; src:url('./benjistokman/montserrat300.ttf') format('ttf');}
 @font-face {font-family:'Montserrat'; font-style:italic; font-weight:300; src:url('./benjistokman/montserrat300i.ttf') format('ttf');}
 @font-face {font-family:'Montserrat'; font-style:normal; font-weight:400; src:url('./benjistokman/montserrat400.ttf') format('ttf');}
@@ -24,9 +53,9 @@ blockquote {border-left:4px solid #e11141;}
 html, body, #write {font-family:"Montserrat", sans-serif;}
 code, .md-fences {font-family:"Share Tech Mono", monospace;}
 
-/* 2.2: Font Sizing */
+/* 2.2:Font Sizing */
 html, body, #write {font-size:1rem;}
-h1 {font-size:3.5rem;}
+h1 {font-size:3.25rem;}
 h2 {font-size:2.5rem;}
 h3 {font-size:2.25rem;}
 h4 {font-size:2rem;}
@@ -35,29 +64,28 @@ h6 {font-size:1.5rem;}
 p {line-height:1.6rem;}
 blockquote {font-weight:300;}
 
-/* 2.3: Font Colors */
-html, body, #write {color:#f5f5f5;}
+/* 2.3:Font Colors */
+html, body, #write, #typora-sidebar {color:#f5f5f5;}
 h1, h2, h3, h4, h5, h6, a {color:#e11141;}
-.context-menu {color: #f0f0f0;}
+.context-menu {color:#f0f0f0;}
 
-/* 2.4: Font Styling */
+/* 2.4:Font Styling */
 html, body, #write {font-weight:400;}
 h1, h2, h3, h4, h5, h6 {font-weight:300;}
-h1 {font-weight:900; text-align: center; text-transform:uppercase;}
+h1 {font-weight:900; text-transform:uppercase;}
 a:hover {text-decoration:underline;}
 
-/* 3.0: Layout */
+/* 3.0:Layout */
 #write {max-width:900px;}
 
-/* 3.1: Tables */
+/* 3.1:Tables */
 table {margin-bottom:20px}
-table th, table td {padding:8px; line-height:1.25rem; vertical-align:top;border-top:2px solid #202020}
+table th, table td {padding:8px; line-height:1.25rem; vertical-align:top;border:1px solid #f5f5f5;}
 table th {font-weight:bold}
 table thead th {vertical-align:bottom}
-table caption+thead tr:first-child th, table caption+thead tr:first-child td, table colgroup+thead tr:first-child th, table colgroup+thead tr:first-child td, table thead:first-child tr:first-child th, table thead:first-child tr:first-child td {border-top:0;}
-table tbody+tbody {border-top:2px solid #d0d0d0}
+table thead:first-child tr:first-child th {border-bottom:2px solid; text-align:center;}
 
-/* 3.2: Code */
+/* 3.2:Code */
 code, .md-fences {padding:.5em; padding:.1em; margin-left:0.2em; margin-right:0.2em;}
 .md-fences {margin:0 0 20px; padding:0.3em 1em; padding-top:0.4em;}
 
