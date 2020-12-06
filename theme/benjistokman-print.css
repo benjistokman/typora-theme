@@ -1,34 +1,34 @@
  :root {
-	--accent-color: #e11141;
-	--bg-color: #202020;
-	--border-color: #e11141;
-	--code-bg-color: #404040;
-	--text-color: #f5f5f5;
-	--header-color: #e11141;
-	--link-color: #e11141;
-	--side-bar-bg-color: #000000;
-	--window-border: 1px solid #f5f5f5;
-	--active-file-bg-color: #505050;
-	--body-font: 'Montserrat', sans-serif;
-	--font-size: 1rem;
-	--h1-fontsize: 3.25rem;
-	--h2-fontsize: 2.5rem;
-	--h3-fontsize: 2.25rem;
-	--line-height: 1rem;
-	--main-content-margin: 0 auto;
-	--main-content-max-width: 800px;
-	--monospace-font-size: 1rem;
-	--monospace-font: 'Share Tech Mono', monospace;
-	--monospace-line-height: 1rem;
+	--accent-color: #e11141; 
+	--bg-color: #ffffff; 
+	--border-color: #e11141; 
+	--code-bg-color: #e0e0e0; 
+	--text-color: #202020; 
+	--header-color: #e11141; 
+	--link-color: #e11141; 
+	--side-bar-bg-color: #ffffff; 
+	--window-border: 1px solid #202020; 
+	--active-file-bg-color: #b0b0b0; 
+	--body-font: 'Montserrat', sans-serif; 
+	--font-size: 1rem; 
+	--h1-fontsize: 3.25rem; 
+	--h2-fontsize: 2.5rem; 
+	--h3-fontsize: 2.25rem; 
+	--line-height: 1rem; 
+	--main-content-margin: 0 auto; 
+	--main-content-max-width: 800px; 
+	--monospace-font-size: 1rem; 
+	--monospace-font: 'Share Tech Mono', monospace; 
+	--monospace-line-height: 1rem; 
 }
 
 /* 1.0:Colors */
 /* 1.1 Background Colors */
-html, body, #write {background-color:#202020;}
-#typora-sidebar {background-color:#000000;}
-code, .md-fences {background-color:#404040;}
-.file-list-item.active {background-color:#303030;}
-.context-menu {background-color:#101010;}
+html, body, #write {background-color:#ffffff;}
+#typora-sidebar {background-color:#ffffff;}
+code, .md-fences {background-color:#e0e0e0;}
+.file-list-item.active {background-color:#b0b0b0;}
+.context-menu {background:#f0f0f0;}
 
 /* 1.2:Other Colors */
 blockquote {border-left:4px solid #e11141;}
@@ -63,9 +63,9 @@ h1, h2, h3, h4, h5, h6, p {margin-top:0px; margin-bottom:10px;}
 li {margin-bottom:15px}
 
 /* 2.3:Font Colors */
-html, body, #write, #typora-sidebar {color:#f5f5f5;}
+html, body, #write, #typora-sidebar {color:#202020;}
 h1, a {color:#e11141;}
-.context-menu {color:#f0f0f0;}
+.context-menu {color:303030;}
 
 /* 2.4:Font Styling */
 html, body, #write {font-weight:400;}
@@ -78,11 +78,10 @@ a:hover {text-decoration:underline;}
 .content, #write {width:calc(100% - 80px;); max-width:800px; margin:40px;}
 @media (min-width:880px) {.content, #write {margin-left:calc(50% - 400px); margin-right:calc(50% - 400px);}}
 html, body {margin:0px; padding:0px;}
-li {margin-bottom:15px}
 
 /* 3.1:Tables */
 table {margin-bottom:20px}
-table th, table td {padding:8px; line-height:1.25rem; vertical-align:top; border:1px solid #f5f5f5;}
+table th, table td {padding:8px; line-height:1.25rem; vertical-align:top; border:1px solid #202020;}
 table th {font-weight:bold}
 table thead th {vertical-align:bottom}
 table thead:first-child tr:first-child th {border-bottom:2px solid; text-align:center;}
