@@ -9,7 +9,7 @@ ben.stokman@protonmail.com
 
  : root {
 	--accent-color: #202020; 
-	--bg-color: #f5f5f5; 
+	--bg-color: #ffffff; 
 	--border-color: #202020; 
 	--code-bg-color: #e0e0e0; 
 	--text-color: #202020; 
@@ -36,7 +36,7 @@ ben.stokman@protonmail.com
 =================== */
 
 /* 1.1: Background Colors */
-html {background-color: #f5f5f5;}
+html {background-color: #ffffff;}
 #typora-sidebar {background-color: #ffffff;}
 code, .md-fences {background-color: #e0e0e0;}
 .file-list-item.active {background-color: #b0b0b0;}
