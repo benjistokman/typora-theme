@@ -8,15 +8,15 @@ ben.stokman@protonmail.com
 */
 
  : root {
-	--accent-color: #202020; 
+	--accent-color: #000000; 
 	--bg-color: #ffffff; 
-	--border-color: #202020; 
+	--border-color: #000000; 
 	--code-bg-color: #e0e0e0; 
-	--text-color: #202020; 
-	--header-color: #202020; 
-	--link-color: #202020; 
+	--text-color: #000000; 
+	--header-color: #000000; 
+	--link-color: #000000; 
 	--side-bar-bg-color: #ffffff; 
-	--window-border: 1px solid #202020; 
+	--window-border: 1px solid #000000; 
 	--active-file-bg-color: #b0b0b0; 
 	--body-font: 'Montserrat', sans-serif; 
 	--font-size: 1rem; 
@@ -43,7 +43,7 @@ code, .md-fences {background-color: #e0e0e0;}
 .context-menu {background: #f0f0f0;}
 
 /* 1.2: Other Colors */
-blockquote {border-left: 4px solid #202020;}
+blockquote {border-left: 4px solid #000000;}
 
 /* ================
  2.0: Fonts
@@ -76,8 +76,8 @@ blockquote {font-weight: 300;}
 h1, h2, h3, h4, h5, h6, p {margin-top: 0px; margin-bottom: 10px;}
 
 /* 2.3: Font Colors */
-html, body, #write, #typora-sidebar {color: #202020;}
-h1, a {color: #202020;}
+html, body, #write, #typora-sidebar {color: #000000;}
+h1, a {color: #000000;}
 .context-menu {color: 303030;}
 
 /* 2.4: Font Styling */
@@ -98,7 +98,7 @@ html, body {margin: 0px; padding: 0px;}
 
 /* 3.2: Tables */
 table {margin-bottom: 20px}
-table th, table td {padding: 8px; line-height: 1.25rem; vertical-align: top; border: 1px solid #202020;}
+table th, table td {padding: 8px; line-height: 1.25rem; vertical-align: top; border: 1px solid #000000;}
 table th {font-weight: bold}
 table thead th {vertical-align: bottom}
 table thead: first-child tr: first-child th {border-bottom: 2px solid; text-align: center;}

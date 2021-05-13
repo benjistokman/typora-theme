@@ -10,6 +10,8 @@ This theme is free to download, modify, use, and release for any reason; and is 
 
 ![dark](dark.png)
 
+![print](print.png)
+
 ## Download
 
 Download this repository: https://github.com/benjistokman/typora-theme
