@@ -1,55 +1,65 @@
 /*
-benjistokman-print Typora/CSS Theme
-1.0
+benjistokman Print Typora/CSS Theme
+2.0
 
-Created by
-Ben Stokman
+Created by Ben Stokman
 ben.stokman@protonmail.com
 */
 
- : root {
-	--accent-color: #000000; 
-	--bg-color: #ffffff; 
-	--border-color: #000000; 
-	--code-bg-color: #e0e0e0; 
-	--text-color: #000000; 
-	--header-color: #000000; 
-	--link-color: #000000; 
-	--side-bar-bg-color: #ffffff; 
-	--window-border: 1px solid #000000; 
-	--active-file-bg-color: #b0b0b0; 
-	--body-font: 'Montserrat', sans-serif; 
-	--font-size: 1rem; 
-	--h1-fontsize: 3.25rem; 
-	--h2-fontsize: 2.5rem; 
-	--h3-fontsize: 2.25rem; 
-	--line-height: 1rem; 
-	--main-content-margin: 0 auto; 
-	--main-content-max-width: 800px; 
-	--monospace-font-size: 1rem; 
-	--monospace-font: 'Share Tech Mono', monospace; 
-	--monospace-line-height: 1rem; 
+/*	==============================================
+	0: Root Variables & Reset
+	============================================== */
+
+:root {
+	--theme-color: #000000;
+	--background-color: #ffffff;
+	--text-color: #000000;
+	--context-color: #ffffff;
+	--code-background-color: #e8e8e8;
+	--body-font: 'Montserrat', sans-serif;
+	--monospace-font: 'Share Tech Mono', monospace;
+	--font-size: 1.25rem;
+	--main-content-max-width: 800px;
 }
 
-/* ================
- 1.0: Colors
-=================== */
+html {
+	margin: 0;
+	padding: 0;
+}
 
-/* 1.1: Background Colors */
-html {background-color: #ffffff;}
-#typora-sidebar {background-color: #ffffff;}
-code, .md-fences {background-color: #e0e0e0;}
-.file-list-item.active {background-color: #b0b0b0;}
-.context-menu {background: #f0f0f0;}
+@include-when-export url('https://fonts.benstokman.me/montserrat.css');
+@include-when-export url('https://fonts.benstokman.me/share-tech-mono.css');
+
+/*	==============================================
+	1: Colors
+	============================================== */
+
+html {
+	background-color: var(--background-color);
+	color: var(--text-color);
+}
+
+#typora-sidebar, .context-menu {
+	background-color: var(--context-color);
+}
+
+
+code, pre, .code, .md-fences {
+	background-color: var(--code-background-color);
+}
+.file-list-item.active {
+	background-color: var(--code-background-color);
+}
 
 /* 1.2: Other Colors */
-blockquote {border-left: 4px solid #000000;}
+blockquote {border-left: 4px solid var(--theme-color);}
 
-/* ================
- 2.0: Fonts
-=================== */
+/*	==============================================
+	2: Fonts
+	============================================== */
 
-/* 2.1: Font Family */
+/* 2.1: Font Import */
+
 @font-face {font-family: 'Montserrat'; font-style: normal; font-weight: 300; src: url('./benjistokman/montserrat300.ttf') format('truetype');}
 @font-face {font-family: 'Montserrat'; font-style: italic; font-weight: 300; src: url('./benjistokman/montserrat300i.ttf') format('truetype');}
 @font-face {font-family: 'Montserrat'; font-style: normal; font-weight: 400; src: url('./benjistokman/montserrat400.ttf') format('truetype');}
@@ -60,55 +70,89 @@ blockquote {border-left: 4px solid #000000;}
 @font-face {font-family: 'Montserrat'; font-style: italic; font-weight: 900; src: url('./benjistokman/montserrat900i.ttf') format('truetype');}
 @font-face {font-family: 'Share Tech Mono'; src: url('./benjistokman/share-tech-mono.ttf') format('truetype');}
 
-html {font-family: "Montserrat", sans-serif;}
-code, .md-fences {font-family: "Share Tech Mono", monospace;}
+/* 2.2: Font Size */
 
-/* 2.2: Font Sizing */
-html {font-size: 1.1rem;}
-h1 {font-size: 3.25rem;}
-h2 {font-size: 2.5rem;}
-h3 {font-size: 2rem;}
-h4 {font-size: 1.75rem;}
-h5 {font-size: 1.5rem;}
-h6 {font-size: 1.25rem;}
-p {line-height: 1.6rem;}
-blockquote {font-weight: 300;}
-h1, h2, h3, h4, h5, h6, p {margin-top: 0px; margin-bottom: 10px;}
+html {
+	font-size: var(--font-size);
+}
 
-/* 2.3: Font Colors */
-html, body, #write, #typora-sidebar {color: #000000;}
-h1, a {color: #000000;}
-.context-menu {color: 303030;}
+.content *, #write * {
+	margin: 16px 0;
+}
 
-/* 2.4: Font Styling */
-html {font-weight: 400;}
-h2, h3, h4, h5, h6 {font-weight: 300;}
-h1 {font-weight: 900; text-transform: uppercase;}
-a, a: hover {text-decoration: underline;}
+.content * *, #write * * {
+	margin: 0;
+}
 
-/* ================
- 3.0: Layout
-=================== */
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+h1 {font-size: calc(var(--font-size) * 2.5);}
+h2 {font-size: calc(var(--font-size) * 2.25);}
+h3 {font-size: calc(var(--font-size) * 2);}
+h4 {font-size: calc(var(--font-size) * 1.75);}
+h5 {font-size: calc(var(--font-size) * 1.5);}
+h6 {font-size: calc(var(--font-size) * 1.25);}
+
+/* 2.3: Font Family & Style */
+
+html {
+	font-family: var(--body-font);
+}
+
+h1 {
+	font-weight: 900;
+	text-transform: uppercase;
+	color: var(--theme-color)
+}
+
+h2, h3, h4, h5, h6 {
+	font-weight: 300;
+}
+
+code, pre, .code, .md-fences {
+	font-family: var(--monospace-font);
+}
+
+a {
+	color: var(--theme-color);
+}
+
+
+/*	==============================================
+	3: Layout
+	============================================== */
 
 /* 3.1: Document */
-.content, #write {margin:40px;}
-@media (max-width: 880px) {.content, #write {width: calc(100% - 80px;); max-width: 800px;}}
-@media (min-width: 880px) {.content, #write {margin-left: calc(50% - 400px); margin-right: calc(50% - 400px);}}
-html, body {margin: 0px; padding: 0px;}
+.content, #write {
+	width: calc(100% - 80px);
+	max-width: 800px;
+	margin: auto;
+}
 
 /* 3.2: Tables */
-table {margin-bottom: 20px}
-table th, table td {padding: 8px; line-height: 1.25rem; vertical-align: top; border: 1px solid #000000;}
-table th {font-weight: bold}
-table thead th {vertical-align: bottom}
-table thead: first-child tr: first-child th {border-bottom: 2px solid; text-align: center;}
+table {
+	border-collapse: collapse;
+}
 
-/* 3.3: Code */
-code, .md-fences {padding: .5em; padding: .1em; margin-left: 0.2em; margin-right: 0.2em;}
-.md-fences {margin: 0 0 20px; padding: 0.3em 1em; padding-top: 0.4em;}
+table th, table td {
+	padding: 8px;
+	border: 1px solid var(--text-color);
+}
 
-/* 3.4: Blockquote */
-blockquote {margin: 0 0 1rem; padding: 0.5rem 1rem 0 1rem;}
+table tr:first-of-type {
+	border-bottom: 2px solid var(--text-color);
+}
 
-/* 3.5: Lists */
-li {margin-bottom: 15px}
+table th {
+	font-weight: bold;
+}
+
+/* 3.4: Code */
+pre {padding: 0.5rem;}
+
+/* 3.5: Blockquotes */
+
+blockquote {padding: 0.5rem;}
+blockquote p {margin: 0;}
