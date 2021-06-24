@@ -1,6 +1,6 @@
 /*
 Benjistokman Dark Typora/CSS Theme
-2.2
+2.3
 
 Created by Ben Stokman
 ben.stokman@protonmail.com
@@ -76,14 +76,6 @@ html {
 	font-size: var(--font-size);
 }
 
-.content *, #write * {
-	margin: 8px 0;
-}
-
-pre * {
-	margin: none;
-}
-
 h1, h2, h3, h4, h5, h6 {
 	line-height: 0.8;
 }
@@ -130,6 +122,18 @@ a {
 	width: calc(100% - 80px);
 	max-width: 800px;
 	margin: auto;
+}
+
+.content > * , #write > * {
+	margin: 10px 0;
+}
+
+ul, ol {
+	margin-bottom: 0;
+}
+
+li {
+	margin-bottom: 10px;
 }
 
 /* 3.2: Tables */
