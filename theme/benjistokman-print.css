@@ -1,6 +1,6 @@
 /*
 Benjistokman Print Typora/CSS Theme
-2.5
+2.5.1
 
 Created by Ben Stokman
 ben.stokman@protonmail.com
@@ -89,7 +89,7 @@ table th, table td {
 	border: 1px solid var(--text-color);
 }
 
-table tr:first-of-type {
+thead {
 	border-bottom: 2px solid var(--text-color);
 }
 
