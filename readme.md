@@ -19,7 +19,7 @@ This theme is free to download, modify, use, and release for any reason; and is 
 Download this repository:
 
 ```
-https://github.com/benjistokman/typora-theme
+https://github.com/benjistokman/typora-theme/releases/latest
 ```
 
 Clone this repository:
