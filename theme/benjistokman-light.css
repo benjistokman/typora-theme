@@ -1,6 +1,6 @@
 /*
 Benjistokman Light Typora/CSS Theme
-3.0
+3.1
 
 Created by Ben Stokman
 ben.stokman@protonmail.com
@@ -22,6 +22,12 @@ ben.stokman@protonmail.com
 	--font-size-orig: 1.25rem;
 	--font-size: var(--font-size-orig);
 	--main-content-max-width: 800px;
+}
+
+@media print {
+	:root {
+		--font-size-orig: 1rem;
+	}
 }
 
 html {
@@ -55,6 +61,10 @@ html {
 html {
 	font-size: var(--font-size);
 	font-family: var(--body-font);
+}
+
+content h1, content h2, content h3, content h4, content h5, content h6 {
+	letter-spacing: 3px;
 }
 
 h1 {font-size: calc(var(--font-size) * 2.75);}
@@ -92,16 +102,11 @@ a:hover {
 /* 2.1: Document */
 
 .content, #write {
-	width: calc(100% - 80px);
+	width: calc(100% - 60px);
 	max-width: var(--main-content-max-width);
 	margin: auto;
 	margin-top: 80px;
-	margin-bottom: 80px;
-}
-
-#write {
-	margin-top: 0;
-	margin-bottom: 0;
+	padding: 0;
 }
 
 .content > * , #write > * {
@@ -111,7 +116,6 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--title-font);
 	line-height: 1;
-	margin-top: calc(var(--font-size) * 8/5) !important;
 }
 
 ul, ol {
