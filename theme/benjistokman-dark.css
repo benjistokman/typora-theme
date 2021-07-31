@@ -1,6 +1,6 @@
 /*
 Benjistokman Dark Typora/CSS Theme
-3.2
+3.3
 
 Created by Ben Stokman
 ben.stokman@protonmail.com
@@ -9,6 +9,22 @@ ben.stokman@protonmail.com
 /*	==============================================
 	0: Root Variables & Reset
 	============================================== */
+
+/* 0.1: Font Import */
+
+@font-face {font-family: 'Montserrat'; font-style: normal; font-weight: 400; src: url('./benjistokman/montserrat400.ttf') format('truetype');}
+@font-face {font-family: 'Montserrat'; font-style: italic; font-weight: 400; src: url('./benjistokman/montserrat400i.ttf') format('truetype');}
+@font-face {font-family: 'Montserrat'; font-style: normal; font-weight: 700; src: url('./benjistokman/montserrat700.ttf') format('truetype');}
+@font-face {font-family: 'Montserrat'; font-style: italic; font-weight: 700; src: url('./benjistokman/montserrat700i.ttf') format('truetype');}
+@font-face {font-family: 'Share Tech Mono'; src: url('./benjistokman/share-tech-mono.ttf') format('truetype');}
+@font-face {font-family: 'Odibee Sans'; font-style: normal; font-weight: 400; src: url('./benjistokman/odibee-sans400.otf') format('opentype');}
+@font-face {font-family: 'Odibee Sans'; font-style: normal; font-weight: 700; src: url('./benjistokman/odibee-sans700.otf') format('opentype');}
+
+@include-when-export url('https://fonts.benstokman.me/montserrat.css');
+@include-when-export url('https://fonts.benstokman.me/share-tech-mono.css');
+@include-when-export url('https://fonts.benstokman.me/odibee-sans.css');
+
+/* 0.2: Other */
 
 :root {
 	--theme-color: #fc4651;
@@ -43,32 +59,9 @@ html {
 	1: Fonts
 	============================================== */
 
-/* 1.1: Font Import */
-
-@font-face {font-family: 'Montserrat'; font-style: normal; font-weight: 300; src: url('./benjistokman/montserrat300.ttf') format('truetype');}
-@font-face {font-family: 'Montserrat'; font-style: italic; font-weight: 300; src: url('./benjistokman/montserrat300i.ttf') format('truetype');}
-@font-face {font-family: 'Montserrat'; font-style: normal; font-weight: 400; src: url('./benjistokman/montserrat400.ttf') format('truetype');}
-@font-face {font-family: 'Montserrat'; font-style: italic; font-weight: 400; src: url('./benjistokman/montserrat400i.ttf') format('truetype');}
-@font-face {font-family: 'Montserrat'; font-style: normal; font-weight: 700; src: url('./benjistokman/montserrat700.ttf') format('truetype');}
-@font-face {font-family: 'Montserrat'; font-style: italic; font-weight: 700; src: url('./benjistokman/montserrat700i.ttf') format('truetype');}
-@font-face {font-family: 'Montserrat'; font-style: normal; font-weight: 900; src: url('./benjistokman/montserrat900.ttf') format('truetype');}
-@font-face {font-family: 'Montserrat'; font-style: italic; font-weight: 900; src: url('./benjistokman/montserrat900i.ttf') format('truetype');}
-@font-face {font-family: 'Share Tech Mono'; src: url('./benjistokman/share-tech-mono.ttf') format('truetype');}
-@font-face {font-family: 'Odibee Sans'; src: url('./benjistokman/odibee-sans.ttf') format('truetype');}
-
-@include-when-export url('https://fonts.benstokman.me/montserrat.css');
-@include-when-export url('https://fonts.benstokman.me/share-tech-mono.css');
-@include-when-export url('https://fonts.benstokman.me/odibee-sans.css');
-
-/* 1.2: Font Size */
-
 html {
 	font-size: var(--font-size);
 	font-family: var(--body-font);
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-weight: var(--font-weight)
 }
 
 h1 {font-size: calc(var(--font-size) * 2.75);}
