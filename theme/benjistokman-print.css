@@ -1,6 +1,6 @@
 /*
-Benjistokman Print Typora/CSS Theme
-3.3
+Benjistokman Print Typora & Basic CSS Theme
+4.0
 
 Created by Ben Stokman
 ben.stokman@protonmail.com
@@ -28,32 +28,31 @@ ben.stokman@protonmail.com
 
 :root {
 	--theme-color: #000000;
-	--background-color: #ffffff;
+	--bg-color: #ffffff;
+	--softer-bg-color: #f4f4f4;
 	--text-color: #000000;
 	--context-color: #ffffff;
-	--code-background-color: #e8e8e8;
+	--code-background-color: #dadada;
 	--title-font: 'Odibee Sans', sans-serif;
 	--title-weight: 400;
 	--body-font: 'Montserrat', sans-serif;
+	--ui-font: 'Montserrat', sans-serif;
 	--monospace-font: 'Share Tech Mono', monospace;
 	--font-size-orig: 1.25rem;
 	--font-size: var(--font-size-orig);
 	--main-content-max-width: 800px;
-}
-
-@media print {
-	:root {
-		--font-size-orig: 1rem;
-	}
+	--md-char-color: var(--theme-color);
+	--meta-content-color: var(--theme-color);
+	--active-file-text-color: inherit;
+	--active-file-border-color: var(--body-color);
+	--monospace: var(--monospace-font);
+	--rawblock-edit-panel-bd: var(--bg-color);
 }
 
 html {
 	margin: 0;
 	padding: 0;
 }
-
-@include-when-export url('https://fonts.benstokman.me/montserrat.css');
-@include-when-export url('https://fonts.benstokman.me/share-tech-mono.css');
 
 /*	==============================================
 	1: Fonts
@@ -151,6 +150,7 @@ thead {
 
 table th {
 	font-weight: bold;
+	font-family: var(--ui-font);
 }
 
 /* 2.3: Code */
@@ -170,7 +170,7 @@ blockquote p {margin: 0;}
 	============================================== */
 
 html {
-	background-color: var(--background-color);
+	background-color: var(--bg-color);
 	color: var(--text-color);
 }
 
@@ -187,3 +187,12 @@ code, pre, .code, .md-fences {
 
 /* 3.2: Other Colors */
 blockquote {border-left: calc(var(--body-size) * 1/5) solid var(--theme-color);}
+
+#typora-sidebar, .context-menu {
+	background-color: var(--softer-bg-color);
+	border-right: 2px solid var(--text-color);
+}
+
+.context-menu {
+	border: 2px solid var(--text-color);
+}

@@ -1,6 +1,6 @@
 /*
-Benjistokman Typora/CSS Theme
-3.3
+Benjistokman Typora & Basic CSS Theme
+4.0
 
 Created by Ben Stokman
 ben.stokman@protonmail.com
@@ -28,31 +28,31 @@ ben.stokman@protonmail.com
 
 :root {
 	--theme-color: #fc4651;
-	--background-color: #f5f5f5;
+	--bg-color: #f5f5f5;
+	--softer-bg-color: #eaeaea;
 	--text-color: #202020;
 	--context-color: #ffffff;
 	--code-background-color: #dadada;
 	--title-font: 'Odibee Sans', sans-serif;
 	--title-weight: 400;
 	--body-font: 'Montserrat', sans-serif;
+	--ui-font: 'Montserrat', sans-serif;
 	--monospace-font: 'Share Tech Mono', monospace;
 	--font-size-orig: 1.25rem;
 	--font-size: var(--font-size-orig);
 	--main-content-max-width: 800px;
-}
-
-@media (prefers-color-scheme: light) {
-	:root {
-		--background-color: #f5f5f5;
-		--text-color: #202020;
-		--context-color: #ffffff;
-		--code-background-color: #dadada;
-	}
+	--md-char-color: var(--theme-color);
+	--meta-content-color: var(--theme-color);
+	--active-file-text-color: inherit;
+	--active-file-border-color: var(--body-color);
+	--monospace: var(--monospace-font);
+	--rawblock-edit-panel-bd: var(--bg-color);
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--background-color: #202020;
+		--bg-color: #202020;
+		--softer-bg-color: #383838;
 		--text-color: #f5f5f5;
 		--context-color: #000000;
 		--code-background-color: #383838;
@@ -62,7 +62,7 @@ ben.stokman@protonmail.com
 @media print {
 	:root {
 		--theme-color: #000000;
-		--background-color: #ffffff;
+		--bg-color: #ffffff;
 		--text-color: #000000;
 		--context-color: #ffffff;
 		--code-background-color: #dadada;
@@ -171,6 +171,7 @@ thead {
 
 table th {
 	font-weight: bold;
+	font-family: var(--ui-font);
 }
 
 /* 2.3: Code */
@@ -190,7 +191,7 @@ blockquote p {margin: 0;}
 	============================================== */
 
 html {
-	background-color: var(--background-color);
+	background-color: var(--bg-color);
 	color: var(--text-color);
 }
 
@@ -207,3 +208,12 @@ code, pre, .code, .md-fences {
 
 /* 3.2: Other Colors */
 blockquote {border-left: calc(var(--body-size) * 1/5) solid var(--theme-color);}
+
+#typora-sidebar, .context-menu {
+	background-color: var(--softer-bg-color);
+	border-right: 2px solid var(--text-color);
+}
+
+.context-menu {
+	border: 2px solid var(--text-color);
+}
