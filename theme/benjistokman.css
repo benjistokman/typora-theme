@@ -1,6 +1,6 @@
 /*
 Benjistokman Typora & Basic CSS Theme
-4.0.1
+5.0
 
 Created by Ben Stokman
 ben.stokman@protonmail.com
@@ -34,12 +34,13 @@ ben.stokman@protonmail.com
 	--context-color: #ffffff;
 	--code-background-color: #dadada;
 	--title-font: 'Odibee Sans', sans-serif;
-	--title-weight: 700;
+	--title-weight: 400;
 	--body-font: 'Montserrat', sans-serif;
-	--ui-font: 'Montserrat', sans-serif;
+	--ui-font: var(--body-font);
 	--monospace-font: 'Share Tech Mono', monospace;
-	--font-size-orig: 1.25rem;
+	--font-size-orig: 1.15rem;
 	--font-size: var(--font-size-orig);
+	/* Typora exclusive stuff */
 	--main-content-max-width: 800px;
 	--md-char-color: var(--theme-color);
 	--meta-content-color: var(--theme-color);
@@ -90,15 +91,41 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1;
 }
 
+h1 {
+	border-left: 4px solid var(--text-color);
+	padding-left: 8px;
+}
+
+/* Typora is a real asshole somtimes */
+h2 {
+	box-shadow: -0.15em 0 0 var(--text-color), 0.15em 0 0 var(--text-color);
+	background-color: var(--text-color);
+	display: inline-block !important;
+	width: auto !important;
+	color: var(--bg-color) !important;
+	padding-top: 0.15em;
+	padding-bottom: 0.15em;
+}
+
+h2 > span.md-plain {
+	color: var(--bg-color) !important;
+	margin: 0;
+	padding: 0;
+}
+
+h2 > span.md-plain:after, h2 > span.md-plain:before {
+	box-sizing: content-box !important;
+}
+
 h1 {font-size: calc(var(--font-size) * 2.75);}
-h2 {font-size: calc(var(--font-size) * 2.25);}
-h3 {font-size: calc(var(--font-size) * 2);}
-h4 {font-size: calc(var(--font-size) * 1.75);}
-h5 {font-size: calc(var(--font-size) * 1.5);}
-h6 {font-size: calc(var(--font-size) * 1.25);}
+h2 {font-size: calc(var(--font-size) * 1.75);}
+h3 {font-size: calc(var(--font-size) * 1.5);}
+h4 {font-size: calc(var(--font-size) * 1.25);}
+h5 {font-size: calc(var(--font-size) * 1.1);}
+h6 {font-size: calc(var(--font-size) * 1);}
 
 h1 {
-	color: var(--theme-color);
+	--text-color: var(--theme-color);
 }
 
 ul, ol {
@@ -138,7 +165,12 @@ a:hover {
 }
 
 .content > * , #write > * {
-	margin: calc(var(--font-size) * 4/5) 0;
+	margin: calc(var(--font-size) * 3/4) 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: calc(var(--font-size) * 4/5) !important;
+	margin-bottom: calc(var(--font-size) * 3/4) !important;
 }
 
 @media only screen and (max-width: 54rem) {
@@ -170,14 +202,17 @@ thead {
 
 table th {
 	font-weight: bold;
+	background-color: var(--text-color);
+	color: var(--bg-color);
 	font-family: var(--ui-font);
 }
 
 /* 2.3: Code */
 
-pre {
+pre, pre.md-meta-block {
 	padding: 0.5rem;
 	overflow-x: auto;
+	background-color: var(--code-background-color) !important;
 }
 
 /* 2.4: Blockquotes */
@@ -191,6 +226,9 @@ blockquote p {margin: 0;}
 
 html {
 	background-color: var(--bg-color);
+}
+
+* {
 	color: var(--text-color);
 }
 
