@@ -1,6 +1,6 @@
 /*
 Benjistokman Typora & Basic CSS Theme (Print)
-5.0
+5.1
 
 Created by Ben Stokman
 ben.stokman@protonmail.com
@@ -189,8 +189,11 @@ thead {
 table th {
 	font-weight: bold;
 	background-color: var(--text-color);
-	color: var(--bg-color);
 	font-family: var(--ui-font);
+}
+
+table th, table th * {
+	color: var(--bg-color);
 }
 
 /* 2.3: Code */

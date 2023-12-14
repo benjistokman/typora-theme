@@ -1,5 +1,5 @@
 /*
-Benjistokman Typora & Basic CSS Theme
+Benjistokman Typora & Basic CSS Theme (Print)
 5.1
 
 Created by Ben Stokman
@@ -11,7 +11,10 @@ ben.stokman@protonmail.com
 	============================================== */
 
 /* 0.1: Font Import */
-
+@font-face {font-family: 'Crimson Pro'; font-style: normal; font-weight: 400; src: url('./benjistokman/crimsonpro.ttf') format('truetype');}
+@font-face {font-family: 'Crimson Pro'; font-style: italic; font-weight: 400; src: url('./benjistokman/crimsonpro400i.ttf') format('truetype');}
+@font-face {font-family: 'Crimson Pro'; font-style: normal; font-weight: 700; src: url('./benjistokman/crimsonpro700.ttf') format('truetype');}
+@font-face {font-family: 'Crimson Pro'; font-style: italic; font-weight: 700; src: url('./benjistokman/crimsonpro700i.ttf') format('truetype');}
 @font-face {font-family: 'Montserrat'; font-style: normal; font-weight: 400; src: url('./benjistokman/montserrat400.ttf') format('truetype');}
 @font-face {font-family: 'Montserrat'; font-style: italic; font-weight: 400; src: url('./benjistokman/montserrat400i.ttf') format('truetype');}
 @font-face {font-family: 'Montserrat'; font-style: normal; font-weight: 700; src: url('./benjistokman/montserrat700.ttf') format('truetype');}
@@ -27,15 +30,16 @@ ben.stokman@protonmail.com
 /* 0.2: Other */
 
 :root {
-	--theme-color: #fc4651;
-	--bg-color: #f5f5f5;
+	--theme-color: #000000;
+	--bg-color: #ffffff;
 	--softer-bg-color: #eaeaea;
-	--text-color: #202020;
+	--text-color: #000000;
 	--context-color: #ffffff;
 	--code-background-color: #dadada;
 	--title-font: 'Odibee Sans', sans-serif;
 	--title-weight: 400;
-	--body-font: 'Montserrat', sans-serif;
+	--body-font: 'Crimson Pro', serif;
+	--ui-font: 'Montserrat', sans-serif;
 	--ui-font: var(--body-font);
 	--monospace-font: 'Share Tech Mono', monospace;
 	--font-size-orig: 1.15rem;
@@ -50,23 +54,9 @@ ben.stokman@protonmail.com
 	--rawblock-edit-panel-bd: var(--bg-color);
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--bg-color: #202020;
-		--softer-bg-color: #383838;
-		--text-color: #f5f5f5;
-		--context-color: #000000;
-		--code-background-color: #383838;
-	}
-}
-
 @media print {
 	:root {
 		--theme-color: #000000;
-		--bg-color: #ffffff;
-		--text-color: #000000;
-		--context-color: #ffffff;
-		--code-background-color: #dadada;
 		--font-size-orig: 1rem;
 	}
 }
